@@ -1,0 +1,36 @@
+﻿ body{
+    background-image: url('insure3.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:center;
+    background-size:cover;
+      }
+
+ .box {
+   
+    color: black;
+    top: 55%;
+    left: 20%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+.name
+ {
+   background-image: url('insure4.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:center;
+    background-size:cover;
+ }
+ .boxs {
+   
+    color: black;
+    top: 55%;
+    right: -40%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}

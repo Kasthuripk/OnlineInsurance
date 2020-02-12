@@ -15,7 +15,16 @@ namespace OnlineInsurance
         }
         protected void SignIn_Click(object sender, EventArgs e)
         {
-            Response.Write("Sign in successfully completed");
+            string username = textUserId.Text;
+            string password = textPassword.Text;
+            UserEntity user = new UserEntity(username,password);
+            UserManager userManager = new UserManager();
+            userManager.ValidateSignIn(user);
+            if (true)
+                Response.Write("Sign in successfully completed");
+            else
+                Response.Write("Sign in not completed..Please create your account");
+
         }
         protected void SignUp_Click(object sender, EventArgs e)
         {

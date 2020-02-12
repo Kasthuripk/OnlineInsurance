@@ -13,15 +13,6 @@ namespace OnlineInsurance {
     public partial class SignUp {
         
         /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
-        /// <summary>
         /// textCustomerName control.
         /// </summary>
         /// <remarks>
@@ -49,40 +40,13 @@ namespace OnlineInsurance {
         protected global::System.Web.UI.WebControls.RegularExpressionValidator validateName;
         
         /// <summary>
-        /// textCustomerId control.
+        /// textPolicyNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox textCustomerId;
-        
-        /// <summary>
-        /// validateCustomerId control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator validateCustomerId;
-        
-        /// <summary>
-        /// rgvName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator rgvName;
-        
-        /// <summary>
-        /// TextPolicyNumber control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextPolicyNumber;
+        protected global::System.Web.UI.WebControls.TextBox textPolicyNumber;
         
         /// <summary>
         /// validatePolicyNumber control.
@@ -130,22 +94,22 @@ namespace OnlineInsurance {
         protected global::System.Web.UI.WebControls.RegularExpressionValidator rgvphoneNumber;
         
         /// <summary>
-        /// textDOB control.
+        /// textDateOfBirth control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox textDOB;
+        protected global::System.Web.UI.WebControls.TextBox textDateOfBirth;
         
         /// <summary>
-        /// validateDOB control.
+        /// validateDateOfBirth control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator validateDOB;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator validateDateOfBirth;
         
         /// <summary>
         /// textMailId control.
@@ -218,6 +182,24 @@ namespace OnlineInsurance {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CompareValidator validatePassword;
+        
+        /// <summary>
+        /// textRole control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox textRole;
+        
+        /// <summary>
+        /// rvfRole control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rvfRole;
         
         /// <summary>
         /// buttonSignUp control.

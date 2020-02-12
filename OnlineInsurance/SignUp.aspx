@@ -1,16 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SignUp.aspx.cs" Inherits="OnlineInsurance.SignUp" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title> </title>
-      <link rel="stylesheet" href="StyleSheet1.css" />
-</head>
-<body class="name">
-    <form  class="boxs" id="form1" runat="server">
-        <div>
-        <table align="right">
+﻿<%@ Page Language="C#" MasterPageFile="MasterPage.Master" AutoEventWireup="true" CodeBehind="SignUp.aspx.cs" Inherits="OnlineInsurance.SignUp" %>
+<asp:Content ID="SignUp" runat="server"    ContentPlaceHolderID="head"></asp:Content>
+<asp:Content ID="ContentHead" runat="server" ContentPlaceHolderID="ContentPlaceHolder1">
+ <link  rel="stylesheet" href="CSStyleSheet1.css" />
+        <div >
+        <table>
          
                 <tr>
                     <td>CustomerName</td>
@@ -22,7 +15,7 @@
                         <asp:RegularExpressionValidator ID="validateName" runat="server" ControlToValidate="textCustomerName" ErrorMessage="Enter valid name" ValidationExpression="^[A-Za-z]+$"></asp:RegularExpressionValidator>
                     </td>
                 </tr>
-                <tr>
+                <%--<tr>
                     <td>CustomerId</td>
                     <td>
                         <asp:TextBox runat="server" ID="textCustomerId"></asp:TextBox>
@@ -31,11 +24,11 @@
                         <asp:RequiredFieldValidator ID="validateCustomerId" runat="server" ControlToValidate="textCustomerId" ErrorMessage="CustomerId required" Style="color: red"></asp:RequiredFieldValidator>
                         <asp:RegularExpressionValidator ID="rgvName" runat="server" ControlToValidate="textCustomerId" ErrorMessage="Enter Valid Id" ValidationExpression="^[0123456789]\d{2}$"></asp:RegularExpressionValidator>
                     </td>
-                </tr>
+                </tr>--%>
                 <tr>
                     <td>Policy Number</td>
                     <td>
-                        <asp:TextBox runat="server" ID="TextPolicyNumber"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="textPolicyNumber"></asp:TextBox>
                     </td>
                     <td>
                         <asp:RequiredFieldValidator ID="validatePolicyNumber" runat="server" ControlToValidate="textpolicyNumber" ErrorMessage="Policy number required" Style="color: red"></asp:RequiredFieldValidator>
@@ -54,14 +47,15 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>DOB</td>
+                    <td>DateOfBirth</td>
                     <td>
-                        <asp:TextBox ID="textDOB" runat="server" TextMode="Date"></asp:TextBox></td>
-                </tr>
-                <td>
-                    <asp:RequiredFieldValidator ID="validateDOB" runat="server" ControlToValidate="textDOB" ErrorMessage="DOB required" Style="color: red"></asp:RequiredFieldValidator>
-                </td>
-               <tr>
+                        <asp:TextBox ID="textDateOfBirth" runat="server" TextMode="Date"></asp:TextBox>
+                     </td>
+                    <td>
+                        <asp:RequiredFieldValidator ID="validateDateOfBirth" runat="server" ControlToValidate="textDateOfBirth" ErrorMessage="DateOfBirth required" Style="color: red"></asp:RequiredFieldValidator>
+                  </td>
+                 </tr>
+            <tr>
                <td>Mail Id</td>
                 <td>
                     <asp:TextBox runat="server" ID="textMailId" TextMode="Email"></asp:TextBox>
@@ -91,17 +85,23 @@
                         <asp:CompareValidator runat="server" ID="validatePassword" ControlToValidate="textConfirmPassword" ControlToCompare="textPassword" ErrorMessage="Password and Confirm password must be same"></asp:CompareValidator>
                     </td>
                 </tr>
+            
+                <tr>
+                    <td>Role</td>
+                    <td>
+                        <asp:TextBox runat="server" ID="textRole"></asp:TextBox>
+                    </td>
+                    <td>
+                        <asp:RequiredFieldValidator ID="rvfRole" runat="server" ControlToValidate="textRole" ErrorMessage="Role required" Style="color: red"></asp:RequiredFieldValidator>
+                          </td>
+                </tr>
+                
                 <tr>
                     <td colspan="2">
                         <asp:Button runat="server" ID="buttonSignUp" Text="Sign up" OnClick="Signup_Click" />
                     </td>
                 </tr>
-                <tr>
-                    
-                </tr>
-            </table>
+                </table>
             <asp:ValidationSummary ID="validationSummary" runat="server" />
     </div>
-    </form>
-</body>
-</html>
+</asp:Content>

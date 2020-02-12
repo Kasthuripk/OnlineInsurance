@@ -10,24 +10,33 @@
 namespace OnlineInsurance {
     
     
-    public partial class SignIn {
+    public partial class GridView {
         
         /// <summary>
-        /// textUserId control.
+        /// UserData control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox textUserId;
+        protected global::System.Web.UI.WebControls.GridView UserData;
         
         /// <summary>
-        /// textPassword control.
+        /// labelsuccess control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox textPassword;
+        protected global::System.Web.UI.WebControls.Label labelsuccess;
+        
+        /// <summary>
+        /// labelfailure control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label labelfailure;
     }
 }

@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="OnlineInsurance.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+<title></title>
+              
+         <asp:Contentplaceholder ID="head" runat="server">
+    </asp:Contentplaceholder>
+        <link  rel="stylesheet" href="StyleSheet1.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="Master">
+              <asp:HyperLink runat="server" ID="HyperLink1" Text="Home" NavigateUrl="~/SBIHome.aspx" ></asp:HyperLink>
+              <asp:HyperLink runat="server" ID="lnkSignIn" Text="SignIn" NavigateUrl="~/SignIn.aspx"></asp:HyperLink>
+               <asp:HyperLink runat="server" ID="lnkSignUp" Text="SignUp" NavigateUrl="~/SignUp.aspx"></asp:HyperLink>+
+               <asp:HyperLink runat="server" ID="HyperLink2" Text="GridView" NavigateUrl="~/GridView.aspx"></asp:HyperLink>
+            </div>
+        <div class="box">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+          </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

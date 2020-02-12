@@ -15,17 +15,16 @@ namespace OnlineInsurance
         }
         protected void Signup_Click(object sender, EventArgs e)
         {
-            string customerName = textCustomerName.Text;
-            int customerId = int.Parse(textCustomerId.Text);
-            long policyNumber = long.Parse(TextPolicyNumber.Text);
-            long mobileNumber = long.Parse(textphoneNumber.Text);
-            DateTime DOB = Convert.ToDateTime(textDOB.Text);
-            string mailId = textMailId.Text;
-            string password = textPassword.Text;
-            UserRepository user = new UserRepository();
-            int rows = user.AddCustomer(customerName, customerId, policyNumber, mobileNumber, DOB, mailId, password);
-            if (rows >= 1)
-                Response.Redirect("SignIn.aspx");
+            UserManager userManager = new UserManager();
+            UserEntity user = new UserEntity(textCustomerName.Text, Convert.ToInt32(textPolicyNumber.Text), Convert.ToInt64(textphoneNumber.Text), textDateOfBirth.Text, textMailId.Text, textPassword.Text, textRole.Text);
+            if (userManager.InsertCustomerDetail(user) == true)
+            {
+                Response.Write("<script LANGUAGE='JavaScript' >alert('Registration Successful')</script>");
+            }
+            else
+            {
+                Response.Write("<script LANGUAGE='JavaScript' >alert('Registration Fails')</script>");
+            }
 
         }
     }
